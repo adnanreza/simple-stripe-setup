@@ -43,8 +43,8 @@ app.post("/products/:id/create-checkout-session", async c => {
         userId: user.id,
       },
     })
-    customerId = customer.id
-    // TODO: Save customer ID to the user in the DB
+  customerId = customer.id
+  //   // TODO: Save customer ID to the user in the DB
   }
 
   const session = await stripe.checkout.sessions.create({
